@@ -142,3 +142,15 @@ export const orderHistory = [
     time: "01:09",
   },
 ];
+
+export const footerData = [
+  { product: "Soybean (SSBS)", price: "₦30,834.59" },
+  { product: "Sorghum (SSGM)", price: "₦30,834.59" },
+  { product: "Soybean (SSBS)", price: "₦30,834.59" },
+  { product: "Maize (SMAZ)", price: "₦30,834.59" },
+  { product: "Paddy Rice (SPRL)", price: "₦30,834.59" },
+  { product: "Cocoa (SCOC)", price: "₦30,834.59" },
+  { product: "Soybean (SSBS)", price: "₦30,834.59" },
+  { product: "Soybean (SSBS)", price: "₦30,834.59" },
+  { product: "Soybean (SSBS)", price: "₦30,834.59" },
+];
