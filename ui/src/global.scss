@@ -1,0 +1,471 @@
+@mixin mobile {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.text {
+  text-decoration: underline;
+  color: purple;
+}
+
+// CONTAINER STYLES
+.container-one {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafb;
+  .container-wrapper {
+    height: 88vh;
+    width: 1440px;
+    position: relative;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+// REGISTRATION LAYOUT STYLES
+.registration-layout {
+  margin: 3rem 25rem;
+  padding: 1rem;
+  background-color: white;
+  color: rgb(55, 55, 55);
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  // height: 72vh;
+  position: relative;
+
+  @include mobile {
+    margin: 1rem;
+  }
+
+  .categories {
+    margin: 2rem 0rem;
+
+    .links {
+      display: flex;
+      margin-top: 1rem;
+      gap: 1rem;
+      align-items: center;
+
+      a {
+        width: 150px;
+        border: 1px solid rgba(128, 128, 128, 0.253);
+        padding: 1rem 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+//SIGNIN LAYOUT STYLES
+.signin-layout {
+  margin: 3rem 25rem;
+  padding: 1rem;
+  color: rgb(55, 55, 55);
+  background-color: white;
+  padding-bottom: 5rem;
+
+  @include mobile {
+    margin: 1rem;
+  }
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .signin {
+    p {
+      text-align: center;
+      font-weight: 300;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+
+      .signinlink {
+        width: 80%;
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+        border: none;
+        border-radius: 2px;
+        background-color: #52965e;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .createaccount {
+    margin-top: 8rem;
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      font-weight: 300;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+
+      .signinlink {
+        width: 80%;
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+        border: none;
+        border-radius: 2px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+//SIGNIN PAGE STYLES
+.signin-page {
+  p {
+    text-align: center;
+    font-weight: 300;
+  }
+  .link {
+    text-align: center;
+
+    a {
+      font-weight: bold;
+    }
+  }
+  form {
+    margin: 3rem 0;
+
+    label {
+      margin-bottom: 1rem;
+    }
+
+    input,
+    select {
+      width: 100%;
+      border: 1px solid rgba(128, 128, 128, 0.347);
+      padding: 1rem;
+      font-size: 1.1rem;
+      outline: none;
+      margin-bottom: 1rem;
+    }
+
+    .signedforgotten {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        color: red;
+        font-weight: 600;
+      }
+
+      .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        input {
+          border: 1px solid red;
+          margin-top: 0.9rem;
+        }
+
+        input[type="checkbox"]:checked {
+          background-color: green;
+          border-color: green;
+        }
+
+        h1 {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+
+      button {
+        width: 100%;
+        padding: 0.7rem 1rem;
+        border: none;
+        border-radius: 2px;
+        background-color: #52965e;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .error {
+    margin-top: -1rem;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+}
+
+.chat {
+  position: absolute;
+  right: 0;
+  bottom: 3rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+}
+
+//CORPORATE RESGISTRATION STYLES
+.corporate-registration {
+  form {
+    input,
+    select {
+      width: 100%;
+      border: 1px solid rgba(128, 128, 128, 0.347);
+      padding: 1rem;
+      font-size: 1.1rem;
+      outline: none;
+      margin-bottom: 1rem;
+    }
+
+    .error {
+      margin-top: -1rem;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .type-date {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+
+      .type {
+        flex: 1;
+      }
+      .date {
+        flex: 1;
+      }
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5rem;
+      button {
+        width: 200px;
+        padding: 1rem 2rem;
+        color: red;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//INDIVIDUAL REGISTRATION STYLES
+.individual-registration {
+  form {
+    input {
+      width: 100%;
+      border: 1px solid rgba(128, 128, 128, 0.347);
+      padding: 1rem;
+      font-size: 1.1rem;
+      outline: none;
+      margin-bottom: 1rem;
+    }
+
+    .phoneinput {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      select {
+        flex: 0.2;
+        border: 1px solid rgba(128, 128, 128, 0.347);
+        padding: 1rem;
+        font-size: 1.1rem;
+        outline: none;
+        margin-bottom: 1rem;
+      }
+      input {
+        flex: 0.8;
+      }
+    }
+
+    .error {
+      margin-top: -1rem;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .first-last {
+      margin: 1rem 0;
+      display: flex;
+      gap: 1rem;
+
+      .first {
+        flex: 1;
+      }
+      .last {
+        flex: 1;
+      }
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5rem;
+      button {
+        width: 200px;
+        padding: 1rem 2rem;
+        color: red;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//PROGRESS BAR STYLES
+.progress-container {
+  margin: 1rem 0;
+  position: relative;
+
+  p {
+    text-align: center;
+  }
+
+  .progress-bar {
+    position: relative;
+    margin-top: 1rem;
+    height: 5px;
+    z-index: 10;
+  }
+
+  .progress-bar-shadow {
+    margin-top: -5px;
+    height: 5px;
+    background-color: rgb(245, 243, 243);
+    // z-index: -10;
+  }
+
+  .circles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .circle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgb(245, 243, 243);
+      margin-top: -0.5rem;
+    }
+  }
+}
+
+//STEP4 STYLES
+
+.step4 {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+}
+
+//PASSWORDRESET PAGE STYLES
+.password-reset{
+  padding: 2rem 0;
+  h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p{
+    text-align: center;
+    font-weight: 300;
+  }
+
+  form{
+    margin-top: 2rem;
+    
+    input{
+      width: 100%;
+      border: 1px solid rgba(128, 128, 128, 0.347);
+      padding: 1rem;
+      font-size: 1.1rem;
+      outline: none;
+      margin-bottom: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    button{
+      width: 100%;
+      padding: 0.7rem 1rem;
+      border: none;
+      border-radius: 2px;
+      background-color: #52965e;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10rem;
+
+    button{
+      color: red;
+    }
+  }
+}
