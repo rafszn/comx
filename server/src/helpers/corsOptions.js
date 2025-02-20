@@ -3,6 +3,7 @@ const whitelists = [
   "http://192.168.42.215:5173",
   "http://localhost:5173",
   "http://localhost:5175",
+  "https://commxx.netlify.app",
 ];
 
 const corsOptions = {
