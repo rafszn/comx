@@ -1,9 +1,9 @@
 import CorporateRegistration from "../components/corporateRegistration/CorporateRegistration";
 import IndividualRegistration from "../components/individualRegistration/IndividualRegistration";
 import ResetPassword from "../components/ResetPassword";
+import DashboardLayout from "../layouts/DashboardLayout";
 import RegistrationLayout from "../layouts/RegistrationLayout";
 import SigninLayout from "../layouts/SigninLayout";
-import DashboardPage from "../pages/DashboardPage";
 import PasswordResetPage from "../pages/PasswordResetPage";
 import SigninPage from "../pages/SigninPage";
 
@@ -48,7 +48,7 @@ export const routes = [
   },
   {
     path: "/",
-    element: DashboardPage,
+    element: DashboardLayout,
     protected: true
   },
 ];

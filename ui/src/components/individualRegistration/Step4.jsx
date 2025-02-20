@@ -1,6 +1,14 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Step4 = ({ formData }) => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/welcome");
+    }, 2000);
+    return () => clearTimeout();
+  }, [navigate]);
   return (
     <div className="step4">
       <div className="img-wrapper absolute top-0 left-0 bg-white w-full h-[30vh] flex items-center justify-center">

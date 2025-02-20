@@ -21,6 +21,7 @@ const Step3 = ({ formData, setStep }) => {
       setStep(4);
     } else {
       toast.error(result.error);
+      setLoading(false)
     }
   };
 

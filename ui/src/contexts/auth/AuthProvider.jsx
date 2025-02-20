@@ -12,14 +12,19 @@ export const AuthProvider = ({ children }) => {
     const token = localStorage.getItem("token");
     if (token) {
       setLoading(true);
-      const result = await getCurrentUser();
-      if (result.success) {
-        setUser(result.data);
-        setLoading(false);
-      } else {
+      try {
+        const result = await getCurrentUser();
+        if (result.success) {
+          setUser(result.data);
+        } else {
+          setUser(null);
+          // localStorage.removeItem("token");
+        }
+      } catch {
         setUser(null);
+        // localStorage.removeItem("token");
+      } finally {
         setLoading(false);
-        localStorage.removeItem("token");
       }
     } else {
       setUser(null);
