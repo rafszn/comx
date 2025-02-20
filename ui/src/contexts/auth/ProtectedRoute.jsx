@@ -6,7 +6,7 @@ const ProtectedRoute = ({ element: Component }) => {
   if (loading) {
     return <div>Loading...</div>;
   }
-  return user ? <Component /> : <Navigate to="/welcome/sign-in" replace />;
+  return user ? <Component /> : <Navigate to="/welcome" replace />;
 };
 
 export default ProtectedRoute;
