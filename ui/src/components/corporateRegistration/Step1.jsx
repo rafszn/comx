@@ -18,6 +18,7 @@ const Step1 = ({ onChange, setStep, formData }) => {
       <input
         type="text"
         name="companyName"
+        value={formData.companyName}
         placeholder="Enter your Company Name"
         onChange={onChange}
       />

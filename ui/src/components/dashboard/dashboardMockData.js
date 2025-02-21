@@ -151,4 +151,6 @@ export const footerData = [
   { product: "Paddy Rice (SPRL)", price: "₦30,834.59" },
   { product: "Cocoa (SCOC)", price: "₦30,834.59" },
   { product: "Soybean (SSBS)", price: "₦30,834.59" },
+  { product: "Soybean (SSBS)", price: "₦30,834.59" },
+  { product: "Soybean (SSBS)", price: "₦30,834.59" },
 ];

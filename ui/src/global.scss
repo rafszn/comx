@@ -566,6 +566,18 @@ body {
       justify-content: flex-end;
       gap: 0.2rem;
 
+      @include mobile{
+        justify-content: space-between
+      }
+
+      .logout{
+        display: none;
+
+        @include mobile{
+          display: block;
+        }
+      }
+
       p {
         padding: 0.2rem 0.5rem;
         background-color: black;
@@ -1001,5 +1013,14 @@ body {
         }
       }
     }
+  }
+}
+
+
+//LOGOUT BUTTON STYLE 
+.logout{
+  transition: all .3s ease;
+  &:hover{
+   scale: 1.05;
   }
 }

@@ -1,6 +1,7 @@
 import { MdOutlineLightMode } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
+import { LuLogOut } from "react-icons/lu";
 
 const DashBoardHeader = () => {
   return (
@@ -39,6 +40,13 @@ const DashBoardHeader = () => {
         <div className="second">
           <p>DEMO</p>
           <IoIosArrowDown size={12} />
+          <LuLogOut
+            className="logout"
+            onClick={() => {
+              localStorage.removeItem("token");
+              window.location.reload();
+            }}
+          />
         </div>
       </div>
     </header>

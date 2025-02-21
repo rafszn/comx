@@ -8,6 +8,7 @@ import {
   orderHistory,
   sellOrderBook,
 } from "../components/dashboard/dashboardMockData";
+import LogoutButton from "../components/LogoutButton";
 
 const DashboardLayout = () => {
   return (
@@ -23,6 +24,7 @@ const DashboardLayout = () => {
           <MenuIconLabel text={"Community"} imageSrc={"/profile.svg"} />
           <MenuIconLabel text={"Report"} imageSrc={"/file.svg"} />
           <MenuIconLabel text={"Settings"} imageSrc={"/settings.svg"} />
+          <LogoutButton />
         </div>
 
         {/* Search */}
