@@ -8,12 +8,14 @@ const DashboardFooter = () => {
       </div>
 
       <div className="current">
-        {footerData.map((item, index) => (
-          <div key={index} className="info">
-            <p>{item.product}</p>
-            <p className="price">{item.price}</p>
-          </div>
-        ))}
+        <div className="wrapper">
+          {footerData.map((item, index) => (
+            <div key={index} className="info">
+              <p className="product">{item.product}</p>
+              <p className="price">{item.price}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </footer>
   );

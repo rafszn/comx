@@ -60,6 +60,7 @@ const SigninPage = () => {
             <input
               type="text"
               name="email"
+              value={formData.email}
               onChange={onChange}
               placeholder="Enter your Email"
             />
@@ -71,6 +72,7 @@ const SigninPage = () => {
             <input
               type="password"
               name="password"
+              value={formData.password}
               placeholder="*******"
               onChange={onChange}
             />
