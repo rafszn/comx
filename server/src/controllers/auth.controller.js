@@ -90,7 +90,7 @@ const registerUser = async (req, res) => {
 
     res
       .status(201)
-      .json({ status: "success", message: "User registered successfully" });
+      .json({ status: "success", message: "User created. check your mail for OTP" });
   } catch {
     res
       .status(500)
