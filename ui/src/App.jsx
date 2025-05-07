@@ -4,7 +4,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import { createRoutes, routes } from "./routes/routes";
 import { ToastContainer } from "react-toastify";
 
-export const getSubdomain = () => {
+const getSubdomain = () => {
   const host = window.location.hostname;
   console.log(host);
   const parts = host.split(".");
